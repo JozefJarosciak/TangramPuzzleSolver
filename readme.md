@@ -58,6 +58,7 @@ This project is licensed under the MIT License.
 See the LICENSE file for details: https://github.com/JozefJarosciak/TangramPuzzleSolver/blob/master/license.md
 
 ## Resources
+* Old version of this code: https://github.com/JozefJarosciak/BlockPuzzleSolver/
 * Dancing Links - https://en.wikipedia.org/wiki/Dancing_Links
 * Wikipedia Tetromino - https://en.wikipedia.org/wiki/Tetromino
 * Polyomino - https://en.wikipedia.org/wiki/Polyomino
