@@ -1,7 +1,7 @@
 
-# Block Puzzle Solver
+# Tangram/Tetris Block Puzzle Solver
 
-The Block Puzzle Solver is an advanced tool designed to solve tangram-style puzzles using efficient algorithms (such as the Dancing Links method). This solver supports 11 block types and considers rotations, reflections, and grid constraints to optimize the solution.
+The Block Puzzle Solver is an advanced tool designed to solve tangram and tetris-style puzzles using efficient algorithms (such as the Dancing Links method). This solver supports 11 block types and considers rotations, reflections, and grid constraints to optimize the solution.
 
 ## Features
 - **Dynamic Block Configuration**: Select and configure different types of blocks (e.g., Monomino, Domino, Tetromino).
