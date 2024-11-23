@@ -14,7 +14,16 @@ The Block Puzzle Solver is an advanced tool designed to solve tangram and tetris
 - **Project Details**: Learn more about the development of this project [here](https://www.joe0.com/2018/01/03/n-block-tetromino-tangram-puzzle-solver-in-javascript/).
 
 ## Screenshots
-![image](https://github.com/user-attachments/assets/81d3ef60-7fcb-4a16-b030-3214513c9af6)
+![image](https://github.com/user-attachments/assets/f7178f81-e03a-4cda-bd78-31e7bfdf6c9a)
+
+
+## 🧩 What Can You Use This Solver For?
+
+Many puzzle enthusiasts enjoy solving **Blocks Puzzle Brain Teasers Toys** like [this one on Amazon](https://www.amazon.ca/Coogam-Teasers-Intelligence-Colorful-Educational/dp/B07GF9421C/ref=asc_df_B07GF9421C/). While solving these puzzles can be fun and challenging, sometimes it seems impossible to solve them. That’s where this solver comes in! ✨It will compute a valid solution in seconds, showing exactly how the pieces should fit together.
+
+![image](https://github.com/user-attachments/assets/f8c2d5b0-7044-403d-8cf9-86519d410014)
+
+
 
 ## How It Works
 1. **Block Selection**: Users input the number of blocks for each type (e.g., Monomino, Domino, etc.).
