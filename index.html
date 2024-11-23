@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Block Puzzle Solver</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+
+  <h1>Block Puzzle Solver</h1>
+  <p class="description">
+    This solver uses advanced algorithms, including the <a href="https://en.wikipedia.org/wiki/Dancing_Links" target="_blank" rel="noopener noreferrer">Dancing Links</a> method, to calculate solutions for tangram-style puzzles. It supports 11 types of blocks and accounts for block rotations, reflections, and grid constraints, optimizing solutions for both speed and accuracy.
+  </p><br>
+
+
+
+
+  <!-- Block Configuration Form -->
+  <form id="block-form">
+    <!-- Monomino (A) -->
+    <div class="block-config">
+      <!-- SVG Visualization -->
+      <svg id="svg-A" aria-labelledby="titleA" role="img" xmlns="http://www.w3.org/2000/svg"></svg>
+      <!-- Label and Input -->
+      <label for="A">Monomino (A):</label>
+      <input type="number" id="A" name="A" min="0" value="0">
+    </div>
+
+    <!-- Domino (B) -->
+    <div class="block-config">
+      <svg id="svg-B" aria-labelledby="titleB" role="img" xmlns="http://www.w3.org/2000/svg"></svg>
+      <label for="B">Domino (B):</label>
+      <input type="number" id="B" name="B" min="0" value="0">
+    </div>
+
+    <!-- Triomino I (C) -->
+    <div class="block-config">
+      <svg id="svg-C" aria-labelledby="titleC" role="img" xmlns="http://www.w3.org/2000/svg"></svg>
+      <label for="C">Triomino I (C):</label>
+      <input type="number" id="C" name="C" min="0" value="2">
+    </div>
+
+    <!-- Triomino L (D) -->
+    <div class="block-config">
+      <svg id="svg-D" aria-labelledby="titleD" role="img" xmlns="http://www.w3.org/2000/svg"></svg>
+      <label for="D">Triomino L (D):</label>
+      <input type="number" id="D" name="D" min="0" value="4">
+    </div>
+
+    <!-- Tetromino I (I) -->
+    <div class="block-config">
+      <svg id="svg-I" aria-labelledby="titleI" role="img" xmlns="http://www.w3.org/2000/svg"></svg>
+      <label for="I">Tetromino I (I):</label>
+      <input type="number" id="I" name="I" min="0" value="0">
+    </div>
+
+    <!-- Tetromino L (L) -->
+    <div class="block-config">
+      <svg id="svg-L" aria-labelledby="titleL" role="img" xmlns="http://www.w3.org/2000/svg"></svg>
+      <label for="L">Tetromino L (L):</label>
+      <input type="number" id="L" name="L" min="0" value="2">
+    </div>
+
+    <!-- Tetromino O (O) -->
+    <div class="block-config">
+      <svg id="svg-O" aria-labelledby="titleO" role="img" xmlns="http://www.w3.org/2000/svg"></svg>
+      <label for="O">Tetromino O (O):</label>
+      <input type="number" id="O" name="O" min="0" value="2">
+    </div>
+
+    <!-- Tetromino S (S) -->
+    <div class="block-config">
+      <svg id="svg-S" aria-labelledby="titleS" role="img" xmlns="http://www.w3.org/2000/svg"></svg>
+      <label for="S">Tetromino S (S):</label>
+      <input type="number" id="S" name="S" min="0" value="2">
+    </div>
+
+    <!-- Tetromino T (T) -->
+    <div class="block-config">
+      <svg id="svg-T" aria-labelledby="titleT" role="img" xmlns="http://www.w3.org/2000/svg"></svg>
+      <label for="T">Tetromino T (T):</label>
+      <input type="number" id="T" name="T" min="0" value="2">
+    </div>
+
+    <!-- Pentomino U (U) -->
+    <div class="block-config">
+      <svg id="svg-U" aria-labelledby="titleU" role="img" xmlns="http://www.w3.org/2000/svg"></svg>
+      <label for="U">Pentomino U (U):</label>
+      <input type="number" id="U" name="U" min="0" value="0">
+    </div>
+
+    <!-- Pentomino X (X) -->
+    <div class="block-config">
+      <svg id="svg-X" aria-labelledby="titleX" role="img" xmlns="http://www.w3.org/2000/svg"></svg>
+      <label for="X">Pentomino X (X):</label>
+      <input type="number" id="X" name="X" min="0" value="2">
+    </div>
+
+    <!-- Grid Configuration (Width and Height) -->
+    <div class="grid-config">
+      <label for="grid-width">Grid Width:</label>
+      <input type="text" id="grid-width" name="grid-width" readonly>
+
+      <label for="grid-height">Grid Height:</label>
+      <input type="text" id="grid-height" name="grid-height" readonly>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button type="button" id="solve-btn">Solve</button>
+      <button type="button" id="reset-btn">Reset</button>
+    </div>
+  </form>
+
+  <!-- Solution and Summary Display -->
+  <div class="solution-summary-container">
+    <!-- Solution Display -->
+    <div class="solution-display">
+      <!-- Solution Information -->
+      <div id="solution-info"></div>
+      <!-- Canvas for Solution Visualization -->
+      <canvas id="solution-canvas" width="300" height="300"></canvas>
+      <!-- Modal Window -->
+      <div id="countdown-modal" class="modal">
+        <div class="modal-content">
+          <span id="countdown-timer">10</span> seconds remaining...
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary Display -->
+    <div class="summary-display">
+      <h2>Summary</h2><br>
+      <p id="summary-text">No solution yet.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Include the main.js script at the end of the body for better performance -->
+<script src="main.js"></script>
+</body>
+</html>

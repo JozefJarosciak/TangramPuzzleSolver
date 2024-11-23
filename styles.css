@@ -1,0 +1,358 @@
+/* styles.css */
+
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Container for Content */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Block Configuration Form */
+#block-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.block-config {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+.block-config:hover {
+    transform: translateY(-5px);
+}
+
+.block-config svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.block-config label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.block-config input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Grid Configuration */
+.grid-config {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.grid-config label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.grid-config input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    grid-column: span 2;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    height: 40px; /* Fixed height to prevent resizing */
+}
+
+.buttons button:hover {
+    background-color: #286090;
+}
+
+#reset-btn {
+    background-color: #f44336;
+}
+
+#reset-btn:hover {
+    background-color: #c62828;
+}
+
+/* Solution Summary Container */
+.solution-summary-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Solution and Summary Display */
+.solution-display, .summary-display {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.summary-display {
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Canvas Styling */
+#solution-canvas {
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Solution Info */
+#solution-info {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Disable scroll */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px; /* Could be more or less, depending on screen size */
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#modal-text {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    #block-form {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .solution-summary-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .summary-display {
+        max-width: none;
+    }
+}
+
+@media (max-width: 800px) {
+    #block-form {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .block-config svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .block-config label {
+        font-size: 13px;
+    }
+
+    .block-config input[type="number"] {
+        width: 55px;
+    }
+
+    .grid-config {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .buttons {
+        flex-direction: row; /* Ensure buttons remain side by side */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    #block-form {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .block-config svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .block-config label {
+        font-size: 12px;
+    }
+
+    .block-config input[type="number"] {
+        width: 50px;
+    }
+
+    .grid-config {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .solution-summary-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .summary-display {
+        max-width: none;
+        width: 100%;
+    }
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 300px;
+        border-radius: 8px;
+        text-align: center;
+        position: relative;
+    }
+
+    #countdown-timer {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    #cancel-solve {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #f44336;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    #cancel-solve:hover {
+        background-color: #c62828;
+    }
+
+    .description {
+        text-align: center;
+        font-size: 8px; /* Reduced font size for smaller text */
+        color: #555;
+        margin: 10px 0 20px;
+        line-height: 1.2; /* Adjusted line height for better readability with smaller text */
+    }
+
+}
