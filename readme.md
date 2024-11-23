@@ -9,6 +9,13 @@ The Block Puzzle Solver is an advanced tool designed to solve tangram-style puzz
 - **Visualization**: Interactive visual display of the solution on an HTML5 canvas.
 - **Timeout Handling**: Ensures solutions are computed within a reasonable time frame.
 
+## Demo
+- **Live Demo**: [Block Puzzle Solver](https://www.joe0.com/blockpuzzlesolver.com/)
+- **Project Details**: Learn more about the development of this project [here](https://www.joe0.com/2018/01/03/n-block-tetromino-tangram-puzzle-solver-in-javascript/).
+
+## Screenshots
+_Add screenshots of the application here._
+
 ## How It Works
 1. **Block Selection**: Users input the number of blocks for each type (e.g., Monomino, Domino, etc.).
 2. **Grid Computation**: The tool calculates the optimal grid dimensions for the selected blocks.
@@ -39,17 +46,12 @@ The Block Puzzle Solver is an advanced tool designed to solve tangram-style puzz
 - `styles.css`: CSS file for styling the interface.
 - `main.js`: JavaScript file containing the logic for block generation, grid computation, and solving.
 
-## Screenshots
-_Add screenshots of the application here._
-
-## Installation and Usage
+## Help with Development - Installation and Usage
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/block-puzzle-solver.git
    cd block-puzzle-solver
    ```
-2. Open `index.html` in any modern web browser.
-3. Configure blocks, compute solutions, and visualize results.
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
