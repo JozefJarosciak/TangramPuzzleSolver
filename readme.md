@@ -1,7 +1,7 @@
 
-# Block Puzzle Solver
+# Tangram/Tetris Block Puzzle Solver
 
-The Block Puzzle Solver is an advanced tool designed to solve tangram-style puzzles using efficient algorithms such as the [Dancing Links](https://en.wikipedia.org/wiki/Dancing_Links) method. This solver supports 11 block types and considers rotations, reflections, and grid constraints to optimize the solution.
+The Block Puzzle Solver is an advanced tool designed to solve tangram and tetris-style puzzles using efficient algorithms (such as the Dancing Links method). This solver supports 11 block types and considers rotations, reflections, and grid constraints to optimize the solution.
 
 ## Features
 - **Dynamic Block Configuration**: Select and configure different types of blocks (e.g., Monomino, Domino, Tetromino).
@@ -14,7 +14,14 @@ The Block Puzzle Solver is an advanced tool designed to solve tangram-style puzz
 - **Project Details**: Learn more about the development of this project [here](https://www.joe0.com/2018/01/03/n-block-tetromino-tangram-puzzle-solver-in-javascript/).
 
 ## Screenshots
-![image](https://github.com/user-attachments/assets/5b7bae2f-cd4e-4db8-87f3-3b4b028a7711)
+![image](https://github.com/user-attachments/assets/60e10df4-9dd4-4599-b1df-263b188eca8f)
+
+
+## 🧩 What Can You Use This Solver For?
+Many puzzle enthusiasts enjoy solving **Blocks Puzzle Brain Teasers Toys** like [this one on Amazon](https://www.amazon.ca/Coogam-Teasers-Intelligence-Colorful-Educational/dp/B07GF9421C/ref=asc_df_B07GF9421C/). While solving these puzzles can be fun and challenging, sometimes it seems impossible to solve them. That’s where this solver comes in! ✨It will compute a valid solution in seconds, showing exactly how the pieces should fit together.
+
+![image](https://github.com/user-attachments/assets/f8c2d5b0-7044-403d-8cf9-86519d410014)
+
 
 ## How It Works
 1. **Block Selection**: Users input the number of blocks for each type (e.g., Monomino, Domino, etc.).
@@ -54,8 +61,19 @@ The Block Puzzle Solver is an advanced tool designed to solve tangram-style puzz
    ```
 
 ## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License.
+See the LICENSE file for details: https://github.com/JozefJarosciak/TangramPuzzleSolver/blob/master/license.md
 
+## Resources
+* Old version of this code: https://github.com/JozefJarosciak/BlockPuzzleSolver/
+* Dancing Links - https://en.wikipedia.org/wiki/Dancing_Links
+* Wikipedia Tetromino - https://en.wikipedia.org/wiki/Tetromino
+* Polyomino - https://en.wikipedia.org/wiki/Polyomino
+* Wolfram Math Polyomino - http://mathworld.wolfram.com/Polyomino.html
+* Federico Dossena's Tetromino Solver - https://github.com/adolfintel/tetrispuzzlesolver-html5 (only calculates blocks in order defined)
+* George Martin' Polyominoes: A Guide to Puzzles and Problems in Tiling - https://books.google.sk/books?id=D8KbnTGXDWEC&pg=PA49&lpg=PA49&dq=tetronimo+tiling+formula+math+checkerboard&source=bl&ots=gPiYck0dIW&sig=TvCK7UkhMlhWyfi5hlhGrPhm-uY&hl=en&sa=X&ved=0ahUKEwjO292DlNPYAhXGjywKHYv3BSEQ6AEIODAF#v=onepage&q=tetronimo%20tiling%20formula%20math%20checkerboard&f=false
+* Distinguishable Permutations: https://onlinecourses.science.psu.edu/stat414/node/31
+* Counting distinct n- n-letter long array permutations: https://math.stackexchange.com/questions/2612013/formula-for-counting-distinct-n-letter-long-array-permutations
 ---
 
 **Happy solving!**

@@ -6,17 +6,17 @@
 
 // Color Mapping for Each Block Type
 const COLOR_MAP = {
-    'A': '#1f77b4', // Blue
-    'B': '#ff7f0e', // Orange
-    'C': '#2ca02c', // Green
-    'D': '#d62728', // Red
-    'I': '#9467bd', // Purple
-    'L': '#8c564b', // Brown
-    'O': '#e377c2', // Pink
-    'S': '#7f7f7f', // Gray
-    'T': '#bcbd22', // Olive
-    'U': '#17becf', // Cyan
-    'X': '#ff9896'  // Light Coral
+    'A': '#85e8e1', // Blue
+    'B': '#cac9c9', // Orange
+    'C': '#2c5929', // Green
+    'D': '#a87eaf', // Red
+    'I': '#4c4c4e', // Purple
+    'L': '#4089cc', // Brown
+    'O': '#a1ca5c', // Pink
+    'S': '#ed2e43', // Gray
+    'T': '#bdb852', // Olive
+    'U': '#d36554', // Cyan
+    'X': '#6e3c81'  // Light Coral
 };
 
 // SVG Generation Parameters
