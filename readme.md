@@ -71,7 +71,7 @@ See the LICENSE file for details: https://github.com/JozefJarosciak/TangramPuzzl
 * Polyomino - https://en.wikipedia.org/wiki/Polyomino
 * Wolfram Math Polyomino - http://mathworld.wolfram.com/Polyomino.html
 * Federico Dossena's Tetromino Solver - https://github.com/adolfintel/tetrispuzzlesolver-html5 (only calculates blocks in order defined)
-* George Martin' Polyominoes: A Guide to Puzzles and Problems in Tiling - https://books.google.sk/books?id=D8KbnTGXDWEC&pg=PA49&lpg=PA49&dq=tetronimo+tiling+formula+math+checkerboard&source=bl&ots=gPiYck0dIW&sig=TvCK7UkhMlhWyfi5hlhGrPhm-uY&hl=en&sa=X&ved=0ahUKEwjO292DlNPYAhXGjywKHYv3BSEQ6AEIODAF#v=onepage
+* George Martin' Polyominoes: A Guide to Puzzles and Problems in Tiling - https://www.google.ca/books/edition/Polyominoes_A_Guide_to_Puzzles_and_Probl/FMH2DwAAQBAJ?hl=en&gbpv=1&dq=Polyominoes:+A+Guide+to+Puzzles+and+Problems+in+Tiling&printsec=frontcover
 * Distinguishable Permutations: https://onlinecourses.science.psu.edu/stat414/node/31
 * Counting distinct n- n-letter long array permutations: https://math.stackexchange.com/questions/2612013/formula-for-counting-distinct-n-letter-long-array-permutations
 ---
