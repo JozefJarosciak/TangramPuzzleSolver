@@ -14,7 +14,7 @@ The Block Puzzle Solver is an advanced tool designed to solve tangram-style puzz
 - **Project Details**: Learn more about the development of this project [here](https://www.joe0.com/2018/01/03/n-block-tetromino-tangram-puzzle-solver-in-javascript/).
 
 ## Screenshots
-_Add screenshots of the application here._
+![image](https://github.com/user-attachments/assets/5b7bae2f-cd4e-4db8-87f3-3b4b028a7711)
 
 ## How It Works
 1. **Block Selection**: Users input the number of blocks for each type (e.g., Monomino, Domino, etc.).
