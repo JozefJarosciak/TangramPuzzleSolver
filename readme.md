@@ -54,7 +54,8 @@ The Block Puzzle Solver is an advanced tool designed to solve tangram-style puzz
    ```
 
 ## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. 
+See the LICENSE file for details: https://github.com/JozefJarosciak/TangramPuzzleSolver/blob/master/license.md
 
 ## Resources
 * Dancing Links - https://en.wikipedia.org/wiki/Dancing_Links
