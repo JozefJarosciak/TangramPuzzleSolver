@@ -45,21 +45,21 @@ const BLOCKS = {
     ],
     'B': [ // Domino
         [[1,1]],       // Horizontal
-        [[1], [1]]     // Vertical
+        [[1],[1]]      // Vertical
     ],
     'C': [ // Triomino I
         [[1,1,1]],     // Horizontal
-        [[1], [1], [1]] // Vertical
+        [[1],[1],[1]]  // Vertical
     ],
     'D': [ // Triomino L
         [[1,0],
-            [1,1]],       // Orientation 1
+            [1,1]],
         [[0,1],
-            [1,1]],       // Orientation 2
+            [1,1]],
         [[1,1],
-            [1,0]],       // Orientation 3
+            [1,0]],
         [[1,1],
-            [0,1]]        // Orientation 4
+            [0,1]]
     ],
     'I': [ // Tetromino I
         [[1,1,1,1]],
@@ -339,8 +339,6 @@ class DancingLinks {
     }
 }
 
-
-
 class Node {
     constructor() {
         this.left = this;
@@ -423,7 +421,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const summaryText = document.getElementById('summary-text');
     const modal = document.getElementById('countdown-modal');
     const timerDisplay = document.getElementById('countdown-timer');
-    const cancelBtn = document.getElementById('cancel-solve');
 
     let isSolving = false;
 
@@ -479,38 +476,19 @@ document.addEventListener('DOMContentLoaded', () => {
         return gridDims;
     }
 
-
     function clearCanvas() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
 
-    function stopSolving() {
-        // Cancel solving process
-        isSolving = false;
-
-        // Clear any ongoing timeout for the solving process
-        if (solvingTimeout) {
-            clearTimeout(solvingTimeout);
-            solvingTimeout = null;
-        }
-
-        // Clear the countdown interval if active
-        if (countdownInterval) {
-            clearInterval(countdownInterval);
-            countdownInterval = null;
-        }
-
-        // Hide the modal
-        modal.style.display = 'none';
-
-        // Update summary or display a cancellation message
-        summaryText.innerHTML = 'Solve process was canceled.';
-        solutionInfo.innerHTML = ''; // Clear solution info if necessary
-
-        console.log('Solve process canceled by user.');
+    /**
+     * Helper function to reflect (mirror) a shape horizontally.
+     * @param {Array<Array<number>>} shape
+     * @returns {Array<Array<number>>} - Reflected shape
+     */
+    function reflectShape(shape) {
+        // Reflect horizontally by reversing each row
+        return shape.map(row => [...row].reverse());
     }
-
-
 
     function displaySolution(solution, gridWidth, gridHeight, cellSize) {
         clearCanvas(); // Clear canvas before drawing
@@ -575,7 +553,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     function displaySolutions(solutions, gridWidth, gridHeight, cellSize) {
         if (solutions.length === 0) {
             solutionInfo.innerHTML = `<p>No solutions found.</p>`;
@@ -619,7 +596,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
     /**
      * Helper function to get the full name of a block type.
      * @param {string} block - The block type identifier (e.g., 'A', 'B', 'C').
@@ -639,8 +615,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'U': 'Pentomino U',
             'X': 'Pentomino X'
         };
-
-        // Return the block name if defined, otherwise return a default name.
         return blockNames[block] || 'Unknown Block';
     }
 
@@ -713,19 +687,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const dlx = new DancingLinks(columns, maxTimeMs);
 
+        // Collect all placements (including reflections for D, L, S, T, U)
         const allPlacements = [];
         for (let block in blockCounts) {
             for (let count = 0; count < blockCounts[block]; count++) {
+                // Original orientations
                 BLOCKS[block].forEach(shape => {
                     const placements = getAllPlacements(shape, gridWidth, gridHeight);
                     placements.forEach(cells => {
                         allPlacements.push({ block, cells, count });
                     });
                 });
+
+                // If this block type should also use reflections, generate those
+                if (['D', 'L', 'S', 'T', 'U'].includes(block)) {
+                    BLOCKS[block].forEach(shape => {
+                        const mirrored = reflectShape(shape);
+                        const placements = getAllPlacements(mirrored, gridWidth, gridHeight);
+                        placements.forEach(cells => {
+                            allPlacements.push({ block, cells, count });
+                        });
+                    });
+                }
             }
         }
         shuffle(allPlacements);
 
+        // Build the Dancing Links structure
         allPlacements.forEach(placement => {
             const nodesInRow = [];
             placement.cells.forEach(cell => {
@@ -845,8 +833,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100); // Delay computation to allow modal rendering
     });
 
-
-
     // Reset button event listener
     resetBtn.addEventListener('click', () => {
         document.getElementById('block-form').reset();
@@ -856,6 +842,24 @@ document.addEventListener('DOMContentLoaded', () => {
         clearCanvas();
     });
 
+    // ============================
+    // ADDED: Local Storage Handling
+    // ============================
 
+    // 1. On page load, restore input values from local storage if found
+    blockInputs.forEach(input => {
+        const savedVal = localStorage.getItem(`blockCount_${input.id}`);
+        if (savedVal !== null) {
+            input.value = savedVal;
+        }
+    });
+    // Re-run update to set the correct grid dimensions after load
+    updateGridDimensions();
+
+    // 2. Whenever any input changes, store it in local storage
+    blockInputs.forEach(input => {
+        input.addEventListener('change', () => {
+            localStorage.setItem(`blockCount_${input.id}`, input.value);
+        });
+    });
 });
-
