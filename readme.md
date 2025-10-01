@@ -9,7 +9,7 @@ The Block Puzzle Solver is an advanced tool designed to solve tangram and tetris
 - **Timeout Handling**: Ensures solutions are computed within a reasonable time frame.
 
 ## Demo
-- **Live Demo**: [Block Puzzle Solver](https://www.TetrisSolver.com)
+- **Live Demo**: [TetrisSolver.com](https://www.TetrisSolver.com)
 - **Project Details**: Learn more about the development of this project [here](https://www.joe0.com/2018/01/03/n-block-tetromino-tangram-puzzle-solver-in-javascript/).
 
 ## Screenshots
